@@ -1,0 +1,166 @@
+@import url(https://fonts.google.com/specimen/Lexend+Deca);
+@import url(https://fonts.google.com/specimen/Big+Shoulders+Display);
+
+
+:root {
+    font-family: Lexend Deca, sans-serif;
+    font-size: 15px;
+    line-height: 1.625;
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --couleur-paragraphe:hsla(0, 0%, 100%, 0.75);
+    --couleur-fond: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lexend Deca, sans-serif;
+    font-weight: 400;
+    color: var(--couleur-paragraphe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: var(--couleur-fond);
+    padding-block: 40px;
+    margin-top: 50px;
+
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: Big Shoulders Display;
+    font-weight: 700;
+    color: var(--couleur-fond);
+    line-height: 2;
+    font-size: 30px;
+    }
+
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+    width: fit-content; 
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    }
+
+.main-grid div {
+    flex-direction: column;
+    padding : 50px;
+    display: grid;
+    justify-content: space-between;
+}
+
+.premier {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    gap: 20px;
+}
+
+.second {
+    background-color: var(--dark-cyan);
+    gap: 20px;
+}
+
+.troisieme {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    gap: 20px;
+}
+
+
+button {
+    border-radius: 20px;
+    border: 2px solid var(--couleur-fond); 
+    padding: 10px 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out; 
+}
+
+.premier_bouton {
+    color: var(--bright-orange);
+    border-color: var(--bright-orange); 
+    border: 2px solid var(--couleur-fond);
+}
+
+.premier_bouton:hover {
+    background-color: var(--bright-orange); 
+    color: var(--couleur-fond); 
+    border-color: var(--couleur-fond); 
+    border: 2px solid var(--couleur-fond);
+}
+
+.deuxieme_bouton {
+    color: var(--dark-cyan);
+    border-color: var(--dark-cyan); 
+    border: 2px solid var(--couleur-fond);
+}
+
+.deuxieme_bouton:hover {
+    background-color: var(--dark-cyan);
+    color: var(--couleur-fond);
+    border-color: var(--dark-cyan); 
+    border: 2px solid var(--couleur-fond);
+}
+
+.troisieme_bouton {
+    color: var(--very-dark-cyan);
+    border-color: var(--very-dark-cyan); 
+    border: 2px solid var(--couleur-fond);
+}
+
+.troisieme_bouton:hover {
+    background-color: var(--very-dark-cyan);
+    color: var(--couleur-fond); 
+    border-color: var(--very-dark-cyan); 
+    border: 2px solid var(--couleur-fond);
+}
+
+
+
+@media (width <700px) {
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 0px;
+        width: fit-content; 
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 200px;
+        width: 100%;
+        }
+
+        .main-grid div {
+            padding : 10px;
+           
+        }
+
+        .premier {
+            border-radius: 15px 15px 0 0;
+            gap: 30px;
+        }
+
+        .second {
+            gap: 30px;
+        }
+
+        .troisieme {
+            background-color: var(--very-dark-cyan);
+            border-radius: 0 0 15px 15px;
+            gap: 30px;
+        }
+}
+
